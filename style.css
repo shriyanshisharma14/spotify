@@ -1,0 +1,139 @@
+/* (*) is universal selector and is used to select all elements in an HTML page */
+/* While copying the font from google fonts we can take/add more than 2 fonts and it wil generate one url so it's concise and clean */
+/* The flex layout allows responsive elements within a container to be automatically arranged depending on viewport */
+/* Rem (short for “root-em”) units dictate an element's font size relative to the size of the root element. By default, most browsers use a font size value of 16px. So, if the root element is 16px, an element with the value 1rem will also equal 16px. */
+
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Ubuntu:wght@300&display=swap');
+
+body {
+    background-color: rgb(242, 242, 188);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Crete Round', serif;
+    /* font-family: 'Ubuntu', sans-serif; */
+}
+
+
+nav ul {
+    display: flex;
+    /* now we want to have navigation list in horizontal not vertical*/
+    background-color: #000;
+    list-style-type: none;
+    /*no bullet points*/
+    height: 60px;
+    color: white;
+    align-items: center;
+    /*this will center align only home and about so for spotify word we have  to do something with  brand*/
+
+}
+
+/* changing image size by targeting brand class */
+
+.brand img {
+    width: 50px;
+    padding: 0px 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+nav li{
+    padding: 0 12px;
+}
+
+.container{
+    min-height: 70vh; /*70 percent of total height is required minimum*/
+    background-color: #000;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 13px;
+    padding: 34px;
+    background-image: url(https://png.pngtree.com/illustration/20220317/ourmid/pngtree-girls-listen-to-songs-and-hand-painted-illustrations-at-night-image_62206.jpg);
+    background-repeat: no-repeat;
+   
+    background-size: cover;
+    
+}
+
+.bottom{
+    position: sticky;   /*positioned based on the user's scroll position.The element will scroll along with its container*/
+    background-color: #000;
+    color: white;
+    height: 100px;
+    bottom: 0;
+    display: flex;
+    align-items: center; /*vertically align (secondary axis)*/
+    justify-content: center; /*It aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally) primary axis.*/
+    flex-direction: column;
+}
+
+.icons{
+    margin-top: 14px;
+}
+
+.icons i{
+    cursor:pointer;
+}
+
+#progressBar{
+    width: 80vw;
+    cursor: pointer;
+}
+
+.songItem{
+    height:  50px;
+    display: flex;
+    background-color: white;
+    
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px
+}
+
+.songItem img{
+    margin:0 23px ;
+    width: 50px;
+    border-radius: 34px;
+}
+
+.timeStamp{
+    margin: 0 23px;
+}
+.timeStamp i{
+    cursor: pointer;
+}
+
+.songListContainer{
+    margin-top: 50px;
+}
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Crete Round', serif;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+/*media query working in changing bg color at time of making site responsive  */
+@media only screen and (max-width: 700px) {
+    body {
+      background-color: rgb(233, 205, 221);
+    }
+  }

@@ -1,0 +1,4 @@
+1 -> to change play button small back to pause at clicking it again
+2 -> to change button small to play if song is played by using masterButton
+3 -> to make songName visible and other changes for making site responsive
+4 -> if one song ends then next should automatically start playing
